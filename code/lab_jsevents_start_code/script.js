@@ -1,5 +1,4 @@
-// document.addEventListener('DOMContentLoaded', () => {
-
+const list = document.querySelector("#list")
 
 const enterButton = document.getElementById("enter");
 
@@ -8,9 +7,25 @@ const enterButton = document.getElementById("enter");
 
 
 // Grabbing the enter button and adding an event listener 
-enterButton.addEventListener("enter", (event) =>{
+enterButton.addEventListener("click", (event) =>{
 event.preventDefault();
-addToDoItem();
+// click is a define event that event listener has
+
+// Creating an <li> element and attaching it to the existing <ul>:
+const input = document.getElementById("new-todo");
+const li = document.createElement("li");
+li.innerText = input.value;
+
+
+// Append child
+
+list.appendChild(li)
+
 });
 
-// })
+
+
+
+
+
+

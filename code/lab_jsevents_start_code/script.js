@@ -1,7 +1,8 @@
 const list = document.querySelector("#list")
 
 const enterButton = document.getElementById("enter");
-
+const showDate = document.getElementById("show-date");
+const dateDisplay = document.getElementById("date-display");
 
 
 
@@ -37,15 +38,20 @@ deleteButton.addEventListener("click", () => {
     li.remove();
 });
 
-
-// add Show Date Button
-const showDate = document.getElementById("show-date");
-showDate.addEventListener("click", () => {
-const today = new Date();
-const formattedDate = today.toLocaleDateString("en-US")
-dateDisplay.innerText = formattedDate;
-})
+// add fucntioning Show Date Button
+showDate.addEventListener("click", (event) => {
+    event.preventDefault();
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("en-GB")
+    dateDisplay.innerText = formattedDate;
 });
+    
+
+});
+
+
+
+
 
 
 

@@ -37,6 +37,14 @@ deleteButton.addEventListener("click", () => {
     li.remove();
 });
 
+
+// add Show Date Button
+const showDate = document.getElementById("show-date");
+showDate.addEventListener("click", () => {
+const today = new Date();
+const formattedDate = today.toLocaleDateString("en-US")
+dateDisplay.innerText = formattedDate;
+})
 });
 
 
